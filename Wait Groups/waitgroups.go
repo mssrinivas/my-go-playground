@@ -18,16 +18,16 @@ func main() {
 	wg.Add(2)
 
 	go func() {
-		testWaitGroups("go is hard myaaannnn!")
-		wg.Done()
+	    testWaitGroups("go is hard myaaannnn!")
+	    wg.Done()
 	}()
 
-  go func() {
-    	for i:=0;i<10;i++ {
-	  		time.Sleep(time.Millisecond * 100)
-    	}
-    	testWaitGroups("concurrency != parallelism")
-      wg.Done()
+  	go func() {
+    	     for i:=0;i<10;i++ {
+	        time.Sleep(time.Millisecond * 100)
+    	     }
+    	     testWaitGroups("concurrency != parallelism")
+             wg.Done()
 	}()
 	wg.Wait()
 }
