@@ -1,2 +1,2 @@
 language = "go"
-run = "go run waitgroups.go"
+run = "go run Scheduler/schedule.go"

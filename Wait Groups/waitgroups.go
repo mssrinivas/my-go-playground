@@ -22,12 +22,12 @@ func main() {
 		wg.Done()
 	}()
 
-  	go func() {
-    		for i:=0;i<10;i++ {
+  go func() {
+    	for i:=0;i<10;i++ {
 	  		time.Sleep(time.Millisecond * 100)
-    		}
-    		testWaitGroups("concurrency != parallelism")
-    		wg.Done()
+    	}
+    	testWaitGroups("concurrency != parallelism")
+      wg.Done()
 	}()
 	wg.Wait()
 }
