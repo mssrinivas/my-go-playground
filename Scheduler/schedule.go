@@ -1,3 +1,4 @@
+// Simple Go routine that runs every 24 hours
 package main
 
 import (
