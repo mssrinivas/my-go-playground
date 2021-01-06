@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-    ticker := time.NewTicker(3 * time.Second)
+    ticker := time.NewTicker(86400 * time.Second)
     done := make(chan bool)
 
     go func() {
